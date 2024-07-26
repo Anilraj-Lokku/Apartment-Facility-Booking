@@ -1,5 +1,12 @@
 package com.apartment.facilities.repository;
 
-public class FacilityRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.apartment.facilities.entity.Facility;
+
+
+@Repository
+public interface FacilityRepository extends JpaRepository<Facility, Integer>{
 
 }
