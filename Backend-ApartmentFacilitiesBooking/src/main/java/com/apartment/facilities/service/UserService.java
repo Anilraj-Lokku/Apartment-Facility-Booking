@@ -1,5 +1,8 @@
 package com.apartment.facilities.service;
 
-public class UserService {
+import org.springframework.stereotype.Service;
+
+@Service
+public interface UserService {
 
 }
