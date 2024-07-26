@@ -20,6 +20,8 @@ class ResidentRegistrationService
         return axios.put(this.URL+"/"+id);
     }
 
+    //Delete is not working when done in frontend but it is working with postman
+    //When deleteing in frontend its giving 403 forbidden error
     fnDeleteResident(id) {
         return axios.delete(this.URL+"/"+id);
     }
