@@ -1,5 +1,18 @@
 package com.apartment.facilities.service;
 
-public class ResidentService {
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import com.appartment.facilities.dto.CreateResidentResponseDto;
+import com.appartment.facilities.dto.ResidentDto;
+import com.appartment.facilities.exception.ResidentException;
+
+@Service
+public Interface ResidentService {
+	CreateResidentResponseDto createResident(ResidentDto residentDto) throws ResidentException;
+	String deleteResident(int residentId) throws ResidentException;
+	String UpdateResident(ResidentDto residentDto,int residentId) throws ResidentException;
+	ResidentDto getResidentById(int residentId) throws ResidentException;
+	List<ResidentDto> getAllResident();
 
 }
