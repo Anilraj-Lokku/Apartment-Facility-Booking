@@ -1,6 +1,5 @@
 package com.appartment.facilities.exception;
 
-import javax.security.auth.login.LoginException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
