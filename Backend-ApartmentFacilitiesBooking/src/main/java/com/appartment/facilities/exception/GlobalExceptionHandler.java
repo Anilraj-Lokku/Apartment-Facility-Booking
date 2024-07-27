@@ -14,5 +14,11 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
 		
 	}
+	
+	@ExceptionHandler(FacilityException.class)
+	public ResponseEntity<Object> handleFacilityException(FacilityException ex){
+		String errorMessage = ex.getMessage();
+		return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
+	}
 
 }
