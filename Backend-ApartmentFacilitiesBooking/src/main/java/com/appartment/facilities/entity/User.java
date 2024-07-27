@@ -9,7 +9,7 @@ import jakarta.persistence.InheritanceType;
 
 
 @Entity(name = "userTable")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.JOINED) // Separate tables will be created for each subclasses with a foreign key reference.
 public class User {
 	
 	@Id
