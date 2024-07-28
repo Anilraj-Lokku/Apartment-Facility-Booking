@@ -2,7 +2,7 @@ package com.appartment.facilities.constants;
 
 public class ValidationConstants {
 	
-public static final String INVALID_EMAIL = "Invalid email format.";
+	public static final String INVALID_EMAIL = "Invalid email format.";
 	
 	public static final String INVALID_PHONE = "Invalid phone number.";
 	
@@ -20,4 +20,5 @@ public static final String INVALID_EMAIL = "Invalid email format.";
 	
 	public static final String USER_APPROVAL_PENDING = "Your signup is pending for approval, kindly contact Facilities Manager";
 
+	
 }
