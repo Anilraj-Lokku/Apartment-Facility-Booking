@@ -8,7 +8,7 @@ public class MessageConstants {
 	
 	public static final String BOOKING_ACCEPTED = "accepted";
 	
-	public static final String BOOKING_DECLINE = "declined";
+	public static final String BOOKING_DECLINED = "declined";
 	
 	public static final String BOOKING_CANCELLED = "cancelled";
 	

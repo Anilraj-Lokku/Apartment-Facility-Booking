@@ -11,10 +11,10 @@ import com.appartment.facilities.exception.BookingException;
 @Service
 public interface BookingService {
 	
-	CreateBookingResponseDto createBooking(BookingDto bookingDto);
+	CreateBookingResponseDto createBooking(BookingDto bookingDto) throws BookingException;
 	List<BookingDto> getAllBooking();
-	String approveOrRejectBooking(int bookingId,boolean isApproved);
-	BookingDto getBookingById(int bookingId);
-	BookingDto cancelBooking(int bookingId);
+	String approveOrRejectBooking(int bookingId,boolean isApproved) throws BookingException;
+	BookingDto getBookingById(int bookingId) throws BookingException;
+	BookingDto cancelBooking(int bookingId) throws BookingException;
 
 }
