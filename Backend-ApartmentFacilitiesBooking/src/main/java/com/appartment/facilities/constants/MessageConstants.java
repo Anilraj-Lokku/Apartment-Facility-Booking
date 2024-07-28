@@ -12,6 +12,8 @@ public class MessageConstants {
 	
 	public static final String BOOKING_CANCELLED = "cancelled";
 	
+	public static final String BOOKING_STATUS_FAILED = "Your booking has failed.Please book again.";
+	
 	public static final String FACILITY_STATUS_SUCCESS = "Your facility is created";
 	
 	public static final String FACILITY_STATUS_FAILED = "your facility has failed";
