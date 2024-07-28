@@ -1,6 +1,8 @@
 package com.appartment.facilities.service.impl.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.List;
@@ -57,4 +59,17 @@ public class BookingServiceImplTest {
 
         assertEquals(1, bookingDto.getId());
    }
+   @Test
+    public void testCancelBooking() throws BookingException {
+        Booking booking = new Booking();
+        booking.setId(1);
+        booking.setStatus("Pending");
+
+        when(bookingRepository.findById(1)).thenReturn(Optional.of(booking));
+
+        BookingDto bookingDto = bookingService.cancelBooking(1);
+
+        assertEquals(MessageConstants.BOOKING_CANCELLED, bookingDto.getStatus());
+        verify(bookingRepository).save(any(Booking.class));
+    }
 }

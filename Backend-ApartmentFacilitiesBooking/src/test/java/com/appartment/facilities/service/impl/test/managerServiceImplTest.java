@@ -16,4 +16,4 @@ import com.appartment.facilities.exception.BookingException;
 public class managerServiceImplTest {
     }
 
-}
+
