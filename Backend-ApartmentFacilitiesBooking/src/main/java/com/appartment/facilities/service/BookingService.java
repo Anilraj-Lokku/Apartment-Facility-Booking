@@ -24,9 +24,9 @@ import com.appartment.facilities.dto.CreateBookingResponseDto;
 @Service
 public interface BookingService {
 	
-	CreateBookingResponseDto createBooking(BookingDto bookingDto) 
+	CreateBookingResponseDto createBooking(BookingDto bookingDto);
 	List<BookingDto> getAllBooking();
-	String approveOrRejectBooking(int bookingId,boolean isApproved)
-	BookingDto getBookingById(int bookingId) 
-	BookingDto cancelBooking(int bookingId) 
+	String approveOrRejectBooking(int bookingId,boolean isApproved);
+	BookingDto getBookingById(int bookingId);
+	BookingDto cancelBooking(int bookingId);
 }
