@@ -5,6 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.CrossOrigin;
+>>>>>>> c8acf4d8407735e472adb0fc70c256082018365f
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +25,10 @@ import com.appartment.facilities.service.ResidentService;
 
 @RestController
 @RequestMapping("/v1/resident")
+<<<<<<< HEAD
+=======
+@CrossOrigin(origins = {"*"})
+>>>>>>> c8acf4d8407735e472adb0fc70c256082018365f
 public class ResidentController {
 
     @Autowired
@@ -55,4 +63,8 @@ public class ResidentController {
         List<ResidentDto> residents = residentService.getAllResident();
         return new ResponseEntity<>(residents, HttpStatus.OK);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c8acf4d8407735e472adb0fc70c256082018365f

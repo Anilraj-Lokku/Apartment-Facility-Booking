@@ -46,3 +46,4 @@ public class ManagerController {
     	String message= managerService.approveSignUp(username);
     	return new ResponseEntity<>(message,HttpStatus.OK);
     }
+}
