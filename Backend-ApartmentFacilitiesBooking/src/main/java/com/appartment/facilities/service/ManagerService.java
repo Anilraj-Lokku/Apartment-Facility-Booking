@@ -12,4 +12,5 @@ public interface ManagerService {
 	CreateManagerResponseDto createManager(ManagerDto managerDto) throws ManagerException;
 	String updateManager(ManagerDto managerDto,int managerId) throws ManagerException;
 	ManagerDto getManager();
+	String approveSignUp(String userName) throws ResidentException;
 }
