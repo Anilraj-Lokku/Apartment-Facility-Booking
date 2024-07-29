@@ -49,6 +49,12 @@ public class ManagerController {
     	return new ResponseEntity<>(message,HttpStatus.OK);
     }
     
+    @PutMapping("/approve-signup/decline/{username}")
+    public ResponseEntity<?> declineSignUP(@PathVariable String username) throws ResidentException{
+    	String message= managerService.declineSignUp(username);
+    	return new ResponseEntity<>(message,HttpStatus.OK);
+    }
+
     @GetMapping("/role/{username}")
     public String getManagerRoleByUsername(@PathVariable String username) throws ManagerException {
         String role = managerService.getManagerRoleByUsername(username);

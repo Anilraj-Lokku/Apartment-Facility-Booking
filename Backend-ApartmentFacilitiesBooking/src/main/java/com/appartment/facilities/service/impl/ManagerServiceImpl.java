@@ -141,6 +141,20 @@ public class ManagerServiceImpl implements ManagerService {
 		
 		return "SignUp approved for user: "+userName;
 	}
+
+	@Override
+	public String declineSignUp(String userName) throws ResidentException {
+
+		User user=userRepository.findByUserName(userName);
+
+		if(user==null) {
+			throw new ResidentException(MessageConstants.RESIDENT_NOT_FOUND);
+		}
+		user.setStatus("Declined");
+		userRepository.save(user);
+		
+		return "SignUp approved for user: "+userName;
+	}
 	
 	public String getManagerRoleByUsername(String username) throws ManagerException{
         User user = userRepository.findByUserName(username);
