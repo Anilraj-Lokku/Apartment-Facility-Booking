@@ -142,4 +142,13 @@ public class ManagerServiceImpl implements ManagerService {
 		return "SignUp approved for user: "+userName;
 	}
 
+	public String getManagerRoleByUsername(String username) throws ManagerException{
+        User user = userRepository.findByUserName(username);
+        if(user==null)
+        {
+			throw new ManagerException("Manager not found with username: " + username);
+        }
+        return user.getRole();
+    }
+
 }

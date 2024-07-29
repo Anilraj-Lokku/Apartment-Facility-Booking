@@ -13,5 +13,5 @@ public interface ManagerService {
 	String updateManager(ManagerDto managerDto,int managerId) throws ManagerException;
 	ManagerDto getManager();
 	String approveSignUp(String userName) throws ResidentException;
-
+	String getManagerRoleByUsername(String username) throws ManagerException;
 }

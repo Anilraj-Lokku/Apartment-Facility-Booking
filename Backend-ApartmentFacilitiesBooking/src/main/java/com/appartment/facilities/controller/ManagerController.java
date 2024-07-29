@@ -43,7 +43,13 @@ public class ManagerController {
     }
     @PutMapping("/approve-signup/{username}")
     public ResponseEntity<?> approveSignUp(@PathVariable String username) throws ResidentException{
-    	String message= managerService.approveSignUp(username);
-    	return new ResponseEntity<>(message,HttpStatus.OK);
+        String message= managerService.approveSignUp(username);
+        return new ResponseEntity<>(message,HttpStatus.OK);
+    }
+
+    @GetMapping("/role/{username}")
+    public String getManagerRoleByUsername(@PathVariable String username) throws ManagerException {
+        String role = managerService.getManagerRoleByUsername(username);
+        return role;
     }
 }

@@ -149,7 +149,7 @@ public class BookingServiceImpl implements BookingService {
 		if(!residentRepository.findById(residentId).isPresent()) {
 			throw new BookingException(ValidationConstants.INVALID_RESIDENT_FOR_BOOKING);
 		}
-		if(facilityRepository.findById(facilityId).get().getStatus().equalsIgnoreCase("Occupied")) {
+		if(!facilityRepository.findById(facilityId).get().getStatus().equalsIgnoreCase("Occupied")) {
 			throw new BookingException(ValidationConstants.FACILITY_ALREADY_OCCUPIED);
 		}
 		
