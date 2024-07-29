@@ -35,6 +35,7 @@ public class SecurityConfig {
             .requestMatchers("/auth/**").permitAll() // Permit all access to authentication endpoints
             .requestMatchers("/v1/manager/register/**").permitAll() 
             .requestMatchers("/v1/resident/register/**").permitAll()
+            .requestMatchers("/v1/manager/role/**").permitAll()
             .requestMatchers("/v1/manager/**").hasAuthority("Manager")
             .requestMatchers("/v1/resident/**").hasAnyAuthority("Manager","Resident")
             .requestMatchers("/v1/facility/getall/**").hasAnyAuthority("Manager","Resident")

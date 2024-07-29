@@ -1,11 +1,10 @@
 package com.appartment.facilities.security.classes;
 
-
 public class AuthenticationRequest {
-    private String username;
-    private String password;
+	private String username;
+	private String password;
 
-    public String getUsername() {
+	public String getUsername() {
 		return username;
 	}
 
@@ -25,7 +24,5 @@ public class AuthenticationRequest {
 	public String toString() {
 		return "AuthenticationRequest [username=" + username + ", password=" + password + "]";
 	}
-
-
 
 }

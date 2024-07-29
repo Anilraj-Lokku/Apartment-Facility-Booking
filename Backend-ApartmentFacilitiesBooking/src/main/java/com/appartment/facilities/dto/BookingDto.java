@@ -1,9 +1,8 @@
 package com.appartment.facilities.dto;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class BookingDto {
-
 	private Integer id;
 	private Date bookingDate;
 	private Integer facilityId;
@@ -81,4 +80,3 @@ public class BookingDto {
 	}
 
 }
-

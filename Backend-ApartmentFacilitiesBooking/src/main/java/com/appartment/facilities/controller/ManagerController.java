@@ -3,6 +3,7 @@ package com.appartment.facilities.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +20,7 @@ import com.appartment.facilities.service.ManagerService;
 
 @RestController
 @RequestMapping("/v1/manager")
+@CrossOrigin(origins = {"*"})
 public class ManagerController {
 
     @Autowired
@@ -43,10 +45,10 @@ public class ManagerController {
     }
     @PutMapping("/approve-signup/{username}")
     public ResponseEntity<?> approveSignUp(@PathVariable String username) throws ResidentException{
-        String message= managerService.approveSignUp(username);
-        return new ResponseEntity<>(message,HttpStatus.OK);
+    	String message= managerService.approveSignUp(username);
+    	return new ResponseEntity<>(message,HttpStatus.OK);
     }
-
+    
     @GetMapping("/role/{username}")
     public String getManagerRoleByUsername(@PathVariable String username) throws ManagerException {
         String role = managerService.getManagerRoleByUsername(username);

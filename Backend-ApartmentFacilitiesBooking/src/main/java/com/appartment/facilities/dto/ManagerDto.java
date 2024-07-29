@@ -1,6 +1,5 @@
 package com.appartment.facilities.dto;
 
-
 public class ManagerDto extends UserDto {
 	private String name;
 	private String phone;

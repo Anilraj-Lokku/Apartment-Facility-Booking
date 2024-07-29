@@ -1,6 +1,7 @@
 package com.appartment.facilities.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Lob;
 
 @Entity
 public class Resident extends User{
@@ -10,6 +11,8 @@ public class Resident extends User{
     private String flatType;
     private String phone;
     private String email;
+    
+    @Lob
     private String picture;
     
     
@@ -26,7 +29,7 @@ public class Resident extends User{
 	public Resident() {
 		
 	}
-
+	
 	public String getName() {
 		return name;
 	}

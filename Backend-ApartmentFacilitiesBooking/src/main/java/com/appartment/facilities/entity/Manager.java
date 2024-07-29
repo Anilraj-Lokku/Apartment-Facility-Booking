@@ -1,6 +1,5 @@
 package com.appartment.facilities.entity;
 
-
 import jakarta.persistence.Entity;
 
 @Entity

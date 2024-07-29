@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 
 @Entity
 public class Facility {
@@ -14,6 +15,8 @@ public class Facility {
 	private String name;
 	private String status;
 	private String description;
+	
+	@Lob
 	private String picture;
 	
 	public Facility() {

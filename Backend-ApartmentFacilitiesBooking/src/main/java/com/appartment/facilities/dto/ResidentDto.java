@@ -1,6 +1,6 @@
 package com.appartment.facilities.dto;
 
-public class ResidentDto extends UserDto {
+public class ResidentDto extends UserDto{
 	private String name;
     private String flatNo;
     private String flatType;
@@ -76,5 +76,6 @@ public class ResidentDto extends UserDto {
 		return "Manager [name=" + name + ", flatNo=" + flatNo + ", flatType=" + flatType + ", phone=" + phone
 				+ ", email=" + email + ", picture=" + picture + "]";
 	}
-
+    
+    
 }
